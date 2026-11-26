@@ -1,0 +1,94 @@
+
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SecureAuth — Особистий кабінет</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+<div class="dashboard">
+
+    <header class="topbar">
+        <div class="brand-small">
+            <div class="brand-icon">S</div>
+            <strong>SecureAuth</strong>
+        </div>
+
+        <button class="logout-button" id="logoutButton">
+            Вийти
+        </button>
+    </header>
+
+    <main class="content">
+
+        <div class="welcome-card">
+            <div>
+                <span class="welcome-label">ОСОБИСТИЙ КАБІНЕТ</span>
+                <h1>Вітаємо, <span id="welcomeName">користувач</span>!</h1>
+                <p>Ваш обліковий запис успішно захищений.</p>
+            </div>
+
+            <div class="welcome-icon">🔐</div>
+        </div>
+
+        <section class="info-card">
+            <h2>Що таке симетричне шифрування?</h2>
+
+            <p>
+                Симетричне шифрування — це метод криптографічного
+                захисту інформації, при якому для шифрування та
+                розшифрування використовується один і той самий
+                секретний ключ.
+            </p>
+
+            <p>
+                Під час шифрування початкові дані перетворюються
+                на зашифрований текст. Для отримання початкової
+                інформації необхідно використати відповідний ключ.
+            </p>
+
+            <h3>Алгоритм AES-GCM</h3>
+
+            <p>
+                AES-GCM — це сучасний режим симетричного шифрування,
+                який забезпечує конфіденційність і перевірку
+                цілісності даних. Він використовує секретний ключ
+                та випадковий одноразовий вектор ініціалізації (IV).
+            </p>
+
+            <div class="encryption-flow">
+                <div class="flow-item">Відкриті дані</div>
+                <span>→</span>
+                <div class="flow-item">AES-GCM</div>
+                <span>→</span>
+                <div class="flow-item">Зашифровані дані</div>
+            </div>
+
+            <h3>Переваги симетричного шифрування</h3>
+
+            <ul>
+                <li>Висока швидкість обробки інформації.</li>
+                <li>Надійний захист конфіденційних даних.</li>
+                <li>Можливість використання для великих обсягів інформації.</li>
+                <li>Перевірка цілісності даних у режимі AES-GCM.</li>
+            </ul>
+
+        </section>
+
+        <section class="profile-card">
+            <h2>Інформація про акаунт</h2>
+            <p>Email: <strong id="userEmail"></strong></p>
+            <p>Статус: <span class="status">Активний</span></p>
+            <p>Тип захисту: <strong>AES-GCM</strong></p>
+        </section>
+
+    </main>
+
+</div>
+
+</body>
+</html>

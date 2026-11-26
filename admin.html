@@ -1,0 +1,92 @@
+
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SecureAuth — Адміністратор</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+<div class="dashboard">
+
+    <header class="topbar">
+        <div class="brand-small">
+            <div class="brand-icon">S</div>
+            <strong>SecureAuth</strong>
+        </div>
+
+        <div class="topbar-right">
+            <span class="admin-label">Адміністратор</span>
+            <button class="logout-button" id="logoutButton">
+                Вийти
+            </button>
+        </div>
+    </header>
+
+    <main class="content">
+
+        <div class="page-heading">
+            <div>
+                <h1>Панель адміністратора</h1>
+                <p>Керування зареєстрованими користувачами</p>
+            </div>
+            <div class="admin-avatar">A</div>
+        </div>
+
+        <div class="stats">
+            <div class="stat-card">
+                <span>Загальна кількість</span>
+                <strong id="userCount">0</strong>
+                <small>Зареєстрованих користувачів</small>
+            </div>
+
+            <div class="stat-card">
+                <span>Захист даних</span>
+                <strong>AES-GCM</strong>
+                <small>Симетричне шифрування</small>
+            </div>
+        </div>
+
+        <section class="table-card">
+
+            <div class="table-heading">
+                <div>
+                    <h2>Список користувачів</h2>
+                    <p>Дані розшифровуються для відображення</p>
+                </div>
+
+                <button id="refreshUsers" class="refresh-button">
+                    Оновити
+                </button>
+            </div>
+
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>№</th>
+                            <th>Ім'я</th>
+                            <th>Прізвище</th>
+                            <th>Email</th>
+                            <th>Дата реєстрації</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="usersTable">
+                    </tbody>
+                </table>
+            </div>
+
+            <div id="adminMessage" class="message"></div>
+
+        </section>
+
+    </main>
+
+</div>
+
+</body>
+</html>
